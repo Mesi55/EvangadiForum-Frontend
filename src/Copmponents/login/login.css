@@ -1,0 +1,95 @@
+.main-signup-wraper {
+  margin-top:10% !important;
+  /* margin-left: 50% !important; */
+  position: relative
+}
+.password-toggle{
+position: absolute;
+top: 53%;
+height: 20px;
+
+right: 90px;
+transform: translateY(50%);
+cursor: pointer;
+}
+.in1 {
+  width: 100%;
+  /* height: 60px; */
+  border-radius: 5px;
+  border: silver 1px solid;
+  padding-left: 10px;
+  font-size: 17px;
+  margin-top: -8px;
+ 
+}
+.forgot{
+  text-align: end;
+  color: #FF9119 ;
+}
+.forgot:hover{
+text-decoration-line: underline;
+}
+.boxlogin {
+  border-radius: 20px;
+  background-color: white;
+  z-index: 1;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1), 
+
+}
+
+
+.forTitle {
+  font-size: 20px;
+  font-family: Lato, sans-serif;
+  color:#FF9119;
+  font-weight: bolder;
+  
+
+}
+.button{
+ cursor: pointer;
+  padding: 10px; 
+  color: white;
+  background-color: #FF9119 !important;
+ margin-top: 40px;
+ font-size: 20px;
+ border: #FF9119;
+ border-radius: 8px;
+}
+.loginfrom{
+height: 300px !important;
+}
+.notification {
+position: fixed;
+top: 10px;
+right: 10px;
+width: 300px;
+background-color: #ffffff;
+border: 1px solid #cccccc;
+padding: 20px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+z-index: 9999;
+}
+
+.notification h2 {
+font-size: 16px;
+margin-bottom: 10px;
+}
+
+.notification button {
+margin-top: 30px;
+padding: 8px 16px;
+background-color: #007bff;
+color: #ffffff;
+border: none;
+border-radius: 4px;
+font-size: 14px;
+cursor: pointer;
+}
+
+.notification button:hover {
+background-color: #0056b3;
+}
+
+.notification button:first-child {
+margin-right: 10px;}

@@ -1,0 +1,45 @@
+
+.password-input-wrapper {
+    position: relative;
+  }
+  
+  .password-toggle-icon {
+    position: absolute;
+    top: 50%;
+height: 20px;
+    right: 30px;
+    transform: translateY(-60%);
+    cursor: pointer;
+  }
+  
+  .form{
+    /* height: 400px !important; */
+    margin: 40px 40px 20px 40px;
+  }
+  
+  a{font-family: Lato, sans-serif;
+    color:#FF9119 !important;
+    font-weight: bolder;
+  }
+  .loginlink a{
+    text-decoration: none;
+  }
+  .loginlink a:hover{
+    text-decoration-line: underline;
+  }
+ 
+  
+  @media (max-width: 991px) { /* Medium screens and smaller */
+    .main-signup-wraper {
+      margin-left: -0% !important;
+      transform: translateX(-50%);
+    }
+  }
+  
+  @media (max-width: 767px) { /* Small screens and smaller */
+    .main-signup-wraper {
+      margin-left: -70% !important;
+      transform: translateX(10%);
+    }
+  }
+  

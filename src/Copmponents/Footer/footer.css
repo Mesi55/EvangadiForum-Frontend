@@ -1,0 +1,61 @@
+.footer-wrapper {
+    min-width: 600px;
+      background-color: #3b455a;
+      padding-left: 60px;
+      margin-top: 20PX;
+  }
+
+  .Icon {
+      width: 400px;
+      padding-top: 25px;
+     
+      
+  }
+ 
+  .Icon a {
+    color: whitesmoke !important;
+    opacity: .6;
+    display: inline-block; 
+    border: 2px solid white; 
+    margin-right: 20px !important;
+    border-radius: 50%; 
+    padding: 5px; 
+  }
+  
+  
+  .logo {
+      padding-top: 50px;
+  }
+  
+  .Links > a {
+      display: flex;
+      flex-direction: column;
+      color: rgba(213, 213, 213, 0.6) !important;
+      text-decoration: none;
+    margin-top: -20px;
+
+  }
+  .Links > a:hover ,.Icon a:hover{
+      text-decoration: underline;
+      color: white !important;
+      transition: all 0.4s ease;
+      opacity: .9;
+  }
+  .titlee {
+      padding-top: 35px;
+      color: white;
+  }
+  .Contact-Info > p {
+      display: flex;
+      color: rgba(213, 213, 213, 0.6);
+  }
+  .Contact-Info {
+      padding-bottom: 50px;
+  }
+ 
+  .Links{
+    margin-top: -20px !important;
+  }
+  .Links a {
+    margin-top: -0px;
+  }
