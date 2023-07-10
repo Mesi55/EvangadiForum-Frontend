@@ -10,16 +10,14 @@ const Home = () => {
   const navigate = useNavigate();
   const [notification, setNotification] = useState(null);
   const { id } = useParams();
-   const [questions, setQuestions] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-
-  useEffect(() => {
-    fetchQuestions();
-  }, []);
+  const [questions, setQuestions] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const fetchQuestions = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_base_url}/user/questions`);
+      const response = await fetch(
+        `${process.env.REACT_APP_base_url}/user/questions`
+      );
       const data = await response.json();
       setQuestions(data);
     } catch (error) {
@@ -31,77 +29,41 @@ const Home = () => {
     setSearchTerm(event.target.value);
   };
 
-
-  useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const res = await axios.get(`${process.env.REACT_APP_base_url}/user`, {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("auth-token")}`,
-          },
-        });
-//  let token = localStorage.getItem("auth-token");
-//       try {
-//         const res = await axios.get("http://localhost:7400/user", {
-//           headers: { "x-auth-token": token },
-//         });
-
-        setUserData({
-          token: localStorage.getItem("auth-token"),
-          user: res.data,
-        });
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    fetchUser();
-  }, [setUserData]);
-  //** let user to login if not signed in */
   useEffect(() => {
     if (!userData.user) navigate("/login");
+    fetchQuestions();
   }, [userData.user, navigate]);
-
-
   return (
-    <div className="" >
-      <div className="d-flex home-page mx-5 ">
+    <div className="mx-md-5 mt-3">
+      <div className="d-flex home-page mx-md-3 my-md-2">
         <div className="ask">
-          <Link to="questions " className="link">
+          <button type="" className="linkss">
             {" "}
-            <h3 className="askQ" title="click here to ask">Aks Quesiosn</h3>
-          </Link>{" "}
-          <br />
+            <Link to="questions" className="link">
+              <h3 className="mx-1" title="click here to ask">
+                Ask Questions
+              </h3>
+            </Link>
+          </button>
         </div>
-     
-        <div className=" d-flex welcome">
-          
-       <h4 className="mt-1 mx-1">Welcome: </h4>
-          <h2 className=""> 
-         {userData.user?.display_name}
-          </h2> 
-          {/* <img 
-  src={`https://ui-avatars.com/api/?name=${userData.user?.display_name}&background=FF0000&color=fff&size=50&rounded=true`}
-  alt="User Avatar"
-  className="avatars mx-2"
-/>   */}
+        <div className="welcome">
+          <h4 className=" ">Welcome: {userData.user?.display_name}</h4>
         </div>
       </div>
-      <div   className="search-input ">
-      <input
 
-  type="text"
-  value={searchTerm}
-  onChange={handleSearch}
-  placeholder="Search questions..."
-/>
+      <div className="search-input ">
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={handleSearch}
+          placeholder="Search questions..."
+        />
       </div>
-     
-<div className="queisonslist">
-  
-      <QuestionList searchTerm={searchTerm} />
-</div>
-  
+
+      <div className="queisonslist">
+        <QuestionList searchTerm={searchTerm} />
+      </div>
+
       <hr />
     </div>
   );

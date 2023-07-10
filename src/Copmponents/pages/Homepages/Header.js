@@ -19,10 +19,11 @@ function Header({ signOut }) {
     }
     if (display === "logout") {
       signOut();
+     
     }
   }
   return (
-    <div className="header container-fluid mx-sm-5">
+    <div className="header container-fluid">
       <div className="innerContainer container d-flex justify-content-around ">
         <div className="header__image">
           <a href="/">

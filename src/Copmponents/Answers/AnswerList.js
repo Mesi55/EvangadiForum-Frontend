@@ -36,6 +36,11 @@ const AnswerList = () => {
   const filteredAnswers = answers.filter(
     (answer) => answer.question_id === parseInt(questionId)
   );
+  const formatTime = (time) => {
+    const options = {  year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+    return new Date(time).toLocaleString(undefined, options);
+  };
+
   return (
     <div className="mx-5">
      
@@ -48,8 +53,8 @@ const AnswerList = () => {
             <img style={avatarStyle} src={profile} alt="Avatar" />{answer.time}
             <h5 className="answer-user mx-3"> {answer.user_name}</h5>
             </div>
-            <h2 className="answer-text">{answer.answer}</h2>
-            <p> ON: {answer.answer_time}</p>
+            <h2 className="answer-text ">{answer.answer}</h2>
+            <p className="mt-3"> Answered ON: {formatTime(answer.answer_time)}</p>
             <Likes answer={answer} />
           </div>
         ))

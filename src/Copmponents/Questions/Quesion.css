@@ -44,10 +44,17 @@ input{
 
 
   .slider-button-left:hover {
-    border: 2px solid white;
+    border: 5px solid white;
     background-color: transparent;
-    border-radius: 10px;
-    box-shadow: 0 0 5px blue, 0 0 10px white;
+    border-radius: 30px;
+    box-shadow: 0 0 5px rgb(55, 0, 255), 0 0 10px white;
+  }
+
+  .slider-button-left {
+    border: 5px solid white;
+    background-color: transparent;
+    border-radius: 30px;
+    box-shadow: 0 0 5px  teal , 0 0 10px whitesmoke;
   }
   
   .question-container {

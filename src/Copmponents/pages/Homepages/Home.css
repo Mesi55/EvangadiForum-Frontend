@@ -1,46 +1,64 @@
-.welcome{
-    margin-left: 50%;
-   
-}
-.home-page{
-    margin-top: 12%;
-  
-}
+
 .search-input {
     width: 100%; 
     max-width: 300px; 
     padding: 8px; 
     font-size: 14px;
   }
-  
+  .linkss{
+    background-color: rgb(114, 114, 175);
+    border-radius: 10px;
+    padding: 10px;
+    border: 10px;
+  }
 .askQ{
 justify-content: space-between;
-color: rgb(201, 16, 16) !important;
-text-decoration: solid underline;
+color: white !important;
 font-size: 30px;
 font-weight: bold;
 }
 
 .askQ:hover{
-    color: blue !important
+    color: blue !important;
+
 }
 .ask{
-    margin-top: 10px;
+    margin-top: 10%;
 }
-@media(max-width:600px){
-    .home-page{margin-top: 32%}
-    .askQ{
-        font-size:20px !important;
-        margin-left: 30px;
+
+.home-page {
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .welcome {
+   
+    margin-top: 8%;
+  } 
+
+  @media(max-width:600px){
+    .home-page{margin-top: 32%;
+        margin-left: 10px;
+    
     }
-    .welcome{
-        margin-left: 18%;
+    .askQ,.welcome h4, .welcome h2{
+        font-size: 18px;
+        margin-left: 30px;
        
+    }.linkss{padding: 4px;}
+    .ask,
+    .welcome {
+      width: 100%;
+padding: 0;
+    
+    }.welcome{
+       margin-left: 23px;
     }
     .queisonslist{
-        margin-left: 10%;
+        margin-left: 1%;
     }
     .search-input{
-        margin-left: 20%;
+        margin-left: 10%;
     }
 }

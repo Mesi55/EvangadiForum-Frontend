@@ -3,10 +3,10 @@ import { UserContext } from "./Copmponents/contexts/UserContext";
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import SignUP from "./Copmponents/signup/SignUP";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes, useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Home from "./Copmponents/pages/Homepages/Home";
-import { Card, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import LoginPage from "./Copmponents/login/LoginPage";
 import QuesionForm from "./Copmponents/Questions/QuesionForm";
@@ -15,7 +15,6 @@ import AnswerForm from "./Copmponents/Answers/AnswerForm";
 import Footer from "./Copmponents/Footer/Footer";
 import ForgotPassword from "./passwordReset/ForgotPassword";
 import PageNotFound from "./Copmponents/pages/PageNotFound/PageNotFound";
-import Logoutnotfictions from "./Copmponents/login/Logoutnotfictions";
 import Otp from "./passwordReset/OTP";
 
 function App() {
@@ -43,13 +42,13 @@ function App() {
       }
     }
   };
-
   const signOut = () => {
     setUserData({
       token: undefined,
       user: undefined,
     });
     localStorage.setItem("auth-token", ""); // Clear token from localStorage
+ 
   };
 
   useEffect(() => {
