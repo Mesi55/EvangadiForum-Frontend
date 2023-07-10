@@ -50,9 +50,9 @@ function Otp() {
       // return <h1>hi</h1>
     } else {
       return (
-        <div className="pageNotFound forSuccessPa ">
+        <div className="pageNotFound forSuccessPa  ">
           <h1 className="thankYou">{response.message}</h1>
-          <Link className="thankYouAnch" href={`${response.redirect}`}>
+          <Link className="thankYouAnch" to={`${response.redirect}`}>
             {response.redirectMessage}
           </Link>
         </div>
